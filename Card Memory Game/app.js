@@ -1,4 +1,5 @@
 function getRandomPairs(min, max, pairCount) {
+  
   let numbers = [];
   for (let i = min; i <= max; i++) {
     numbers.push(i);
@@ -18,6 +19,7 @@ function getRandomPairs(min, max, pairCount) {
   }
   return pairs;
 }
+let winPopUp = document.querySelector(".winPopup");
 let pairs = getRandomPairs(0, 11, 6);
 let cards = document.querySelectorAll(".card");
 let imgs = [
@@ -29,10 +31,12 @@ let imgs = [
   "images/polywag.jpg",
 ];
 const startGame = () => {
-  let restart = document.querySelector(".restart");
-  restart.addEventListener("click", () => {
+  let restart = document.querySelectorAll(".restart");
+  restart.forEach((btn)=>{btn.addEventListener("click", () => {
+    winPopUp.style.visibility = "hidden";
     window.location.reload(true);
-  });
+    
+  })});
   let seconds = document.querySelector("#seconds");
   let minutes = document.querySelector("#minutes");
   let moves = document.querySelector("#movesNo");
@@ -98,12 +102,21 @@ const startGame = () => {
     if (revealed.length == pairs.length) {
       win = true;
       clearInterval(timeIncrement);
+      winPopUp.style.visibility = "visible";
+      winPopUp.innerHTML = `<h2>You Won!!!</h2>
+            <div>
+                <p class="time">Time: ${minutes.innerText}:${seconds.innerText}</p>
+                <p class="moves">Moves: ${moves.innerText}</p>
+            </div>
+            <button class="restart">Restart</button>`
     }
-    // clearInterval(timeIncrement);
+    
+    // clearInterval(timeIncrement);  
   };
   cards.forEach((elem) => {
     elem.addEventListener("click", async function (e) {
       // console.log(revealed);
+      if(win != true){
       moves.innerText = parseInt(moves.innerText) + 1;
       let id = e.target.getAttribute("id");
       cards[id].style.transform = `rotateY(0deg)`;
@@ -128,7 +141,9 @@ const startGame = () => {
       }
       // prev = curr;
       flag++;
+    }
     });
+  
   });
 };
 console.log(pairs);

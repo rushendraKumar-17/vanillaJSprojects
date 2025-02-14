@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card{
+    width: 25vw;
+    height: 18vw;
+    border: 1px solid black;
+    display: flex;
+    border-radius: 1vw;
+    flex-direction: column;
+    padding: 0.3vw;
+    text-decoration: none;
+}
+
+.gameImage{
+    width: 24.3vw;
+    height: 13vw;
+    border-radius: 1vw;
+}
+.card>a{
+    text-decoration: none;
+    color: black;
+    font-size: 3vh;
+    text-align: center;
+
+}
+.card:hover{
+    box-shadow: 0px 0px 5px black;
+    scale: 1.04;
+    transition-duration: 0.5s;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+    padding: 2vw 2vw;
+}

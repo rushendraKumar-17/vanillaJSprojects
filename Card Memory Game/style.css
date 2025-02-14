@@ -46,3 +46,37 @@ body{
     transition: transform 1s;
     background-size: cover;
 }
+
+.winPopup{
+    height: 40vh;
+    width: 50vw;
+    background-color: skyblue;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+.winPopup>h2{
+    text-align: center;
+    font-size: 8vh;
+}
+.winPopup>div{
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+    font-size: 4vh;
+    padding: 7vh;
+}
+.restart{
+    width: 8vw;
+    height: 6vh;
+    font-size: 2.5vh;
+    border-radius: 1.5vh;
+    background-color: #e9e5e9;
+}
+.restart:hover{
+    background-color: rgb(253, 254, 255);
+    cursor: pointer;
+}

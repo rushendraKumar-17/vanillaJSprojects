@@ -58,3 +58,78 @@
     margin: 0px auto;
     height: 5vh;
 }
+/* Popup overlay */
+.popup {
+    
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top:0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup content */
+.popup-content {
+    background: white;
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10vh;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Header */
+.popup-content h2 {
+    margin-bottom: 10px;
+}
+
+/* Styled list */
+.popup-content ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Colored indicators */
+.red-box, .green-box, .orange-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.red-box {
+    background: red;
+}
+
+.green-box {
+    background: green;
+}
+
+.orange-box {
+    background: orange;
+}
+
+/* OK button */
+#closePopup {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    
+}
+
+#closePopup:hover {
+    background: #0056b3;
+}
