@@ -76,3 +76,6 @@ hr{
     display: flex;
     flex-wrap: wrap;
 }
+#start{
+    min-width: 5vw;
+}

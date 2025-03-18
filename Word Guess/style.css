@@ -15,6 +15,7 @@
 }
 .attempt{
     width: 20vw;
+    
     height: 8vh;
     font-size: 5vh;
     letter-spacing: 1vh;
@@ -56,7 +57,7 @@
 .playAgain{
     width: 15vw;
     margin: 0px auto;
-    height: 5vh;
+    min-height: 5vh;
 }
 /* Popup overlay */
 .popup {
@@ -132,4 +133,21 @@
 
 #closePopup:hover {
     background: #0056b3;
+}
+
+@media (max-width:1100px){
+    .container{
+        width: 80vw;
+    }
+    .attempt{
+        width: 40vw;
+    }
+}
+@media (max-width : 600px){
+    .container{
+        width: 80vw;
+    }
+    .attempt{
+        width: 40vw;
+    }
 }

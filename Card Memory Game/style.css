@@ -22,9 +22,10 @@ body{
     padding: 5vh;
 }
 .stats{
-    width: 40vw;
+    min-width: 40vw;
     height: 20vh;
     display: flex;
+    flex-wrap: nowrap;
     gap: 10vh;
     padding: 2vh;
     font-size: 4vh;
@@ -46,7 +47,10 @@ body{
     transition: transform 1s;
     background-size: cover;
 }
-
+.time{
+    display: flex;
+    flex-wrap: nowrap;
+}
 .winPopup{
     height: 40vh;
     width: 50vw;
@@ -70,7 +74,7 @@ body{
     padding: 7vh;
 }
 .restart{
-    width: 8vw;
+    min-width: 8vw;
     height: 6vh;
     font-size: 2.5vh;
     border-radius: 1.5vh;
@@ -79,4 +83,22 @@ body{
 .restart:hover{
     background-color: rgb(253, 254, 255);
     cursor: pointer;
+}
+@media (max-width:1200px){
+    .gameArea{
+        width: 80vw;
+        height: 80vw;
+        padding: 2vh;
+        gap:0vw 1vw;
+    }
+    .card{
+        width: 13vw;
+        height: 13vw;
+    }
+}
+@media (max-width:1140px){
+    .card{
+        width: 15vw;
+        height: 15vw;
+    }
 }
